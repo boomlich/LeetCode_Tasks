@@ -2,6 +2,7 @@ package org.example.binaryTree.flip
 
 class Solution {
     fun flipEquiv(root1: TreeNode?, root2: TreeNode?): Boolean {
+        if (root1 == null && root2 == null) return true
         if (root1 == null || root2 == null) return false
 
         var currentLevel1 = listOf(root1)
@@ -40,9 +41,8 @@ class Solution {
                 }
             }
             currentLevel2 = pairs.toMap().toMutableMap()
-
         }
 
-        return false;
+        return true
     }
 }
